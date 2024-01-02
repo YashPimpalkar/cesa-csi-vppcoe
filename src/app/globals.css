@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #111;
+  color: #bbb;
+  scroll-behavior: smooth;
+}
+
+a{
+text-decoration: none;
+color: inherit;
+}
+
+.container{
+max-width: 1366px;
+min-height: 100vh;
+margin: 0 auto;
+padding: 0 60px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+
+
+
+
+
+
+
+.light{
+  background-color: white;
+  color: #111;
+}
+
+.dark{
+  background-color: #111;
+  color: #bbb;
+}
+.theme{
+  transition: 1s all ease; 
+}
+
+@media only screen and (max-width: 300px) {
+  /* Styles for devices with screens up to 300px wide (e.g., very small screens) */
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Add more specific styles as needed */
+}
+
+@media only screen and (min-width: 301px) and (max-width: 767px) {
+  /* Styles for devices with screens between 301px and 767px wide (e.g., smartphones) */
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Add more specific styles as needed */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Styles for devices with screens between 768px and 991px wide (e.g., tablets) */
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  /* Add more specific styles as needed */
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for devices with screens between 992px and 1199px wide (e.g., small laptops) */
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+
+  /* Add more specific styles as needed */
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  /* Styles for devices with screens between 1200px and 1600px wide (e.g., larger laptops and desktops) */
+  /* Keep the original styles for this range */
+}
+
+ 

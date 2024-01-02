@@ -1,0 +1,95 @@
+.container {
+}
+
+.top {
+  display: flex;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title{
+  font-size: 40px;
+}
+
+.desc{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.imagecontainer {
+  flex: 1;
+  height: 300px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #999;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    /* Styles for devices with screens up to 767px wide (e.g., smartphones) */
+    .title {
+      font-size: 24px;
+    }
+  
+    .desc {
+      font-size: 16px;
+    }
+    .top {
+        flex-direction: column-reverse;
+      }
+     
+    
+  
+    /* Adjust other styles as needed */
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Styles for devices with screens between 768px and 991px wide (e.g., tablets) */
+    .title {
+      font-size: 32px;
+    }
+  
+    .desc {
+      font-size: 18px;
+    }
+    
+    /* Adjust other styles as needed */
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Styles for devices with screens between 992px and 1199px wide (e.g., small laptops) */
+    .title {
+      font-size: 36px;
+    }
+  
+    .desc {
+      font-size: 20px;
+    }
+  
+    /* Adjust other styles as needed */
+  }
