@@ -18,13 +18,14 @@ async function getData() {
 }
 
 const Blog = async () => {
-  const data = await getData()
+  const data = await getData();
+  const reversedData = data.reverse(); 
   return (
     <div className={styles.maincontainer}>
-      {data.map((item)=>(
+      {reversedData.map((item)=>(
       <Link href={`/blog/${item._id}`} className={styles.container} key={item.id}>
         <div className={styles.imagecontainer}>
-          <Image src={item.img} alt='' width={400} height={250} className={styles.images} />
+          <Image src={item.img} alt='' width={400} height={250} className={styles.image} />
         </div>
         <div className={styles.content}>
           <h1 className={styles.title}>{item.title}</h1>
