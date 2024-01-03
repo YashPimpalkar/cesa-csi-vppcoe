@@ -41,7 +41,6 @@ const links = [
 const Links = () => {
     const [open, setOpen] = useState(false);
     const session =useSession();
-    const isAdmin = (false);
     return (
         <div className={styles.container}>
             
@@ -52,7 +51,6 @@ const Links = () => {
                 )))}{
                     session.status === "authenticated" ? (
                         <>
-                            {isAdmin && <Navlinks item={{ id: "7", title: "Admin", url: "/Admin" }} />}
                             <button className={styles.logout} onClick={signOut}>logout</button>
                         </>
                     ) : (
@@ -71,7 +69,6 @@ const Links = () => {
                     {
                     session.status === "authenticated" ? (
                         <>
-                            {isAdmin && <Navlinks item={{ id: "7", title: "Admin", url: "/Admin" }} />}
                             <button className={styles.logout} onClick={signOut}>logout</button>
                         </>
                     ) : (
