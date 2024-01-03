@@ -8,7 +8,7 @@ export const GET = async (request, { params }) => {
   try {
     await connect();
 
-    const post = await Post.findById..sort({id:-1});
+    const post = await Post.findById.sort({id:-1});
 
     return new NextResponse(JSON.stringify(post), { status: 200 });
   } catch (err) {
