@@ -12,8 +12,13 @@
   gap: 50;
 }
 
-.img{
-  object-fit: cover;
+
+
+.img {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto; /* Maintain the aspect ratio */
+  width: 50%; /* Make sure the image takes up the full width of its container */
 }
 
 .title{
@@ -82,5 +87,24 @@
   }
   to{
       transform: translateY(0px) scale(1.03); 
+  }
+}
+
+
+
+@media screen and (max-width: 420px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .img {
+    max-width: 100%; /* Adjust max-width for smaller screens */
+    max-height: 100%; /* Adjust max-height for smaller screens */
   }
 }
