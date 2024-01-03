@@ -12,6 +12,7 @@
 .items{
     display: flex;
     gap: 50px;
+    flex-wrap: wrap; 
 }
 
 .item{
@@ -23,11 +24,11 @@
     background-size: cover !important;
 }
 
-.title{
+.title {
     position: absolute;
     right: 10px;
     bottom: 10px;
-    font-size: 40px;
+    font-size: 2rem; /* Adjust as needed for smaller screens */
     font-weight: bold;
 }
 
@@ -44,4 +45,27 @@
 
 .item:hover.title{
 color: #53c28b;
+}
+
+@media screen and (min-width: 900px) {
+    .item {
+        max-width: 30%; /* Allow three items per row on screens wider than 900px */
+    }
+  
+}
+
+@media screen and (min-width: 1200px) {
+    .item {
+        max-width: 23%; /* Allow four items per row on screens wider than 1200px */
+    }
+    
+}
+
+
+@media screen and (min-width: 300px ) and (max-width:600px)  {
+   
+    .items{
+        gap: 20px;
+    }
+    
 }
