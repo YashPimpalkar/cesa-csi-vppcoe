@@ -32,11 +32,11 @@ const links = [
         title: "Contact",
         url: "/contact"
     },
-    {
-        id: 6,
-        title: "Dashboard",
-        url: "/dashboard"
-    },
+    // {
+    //     id: 6,
+    //     title: "Dashboard",
+    //     url: "/dashboard"
+    // },
 ];
 const Links = () => {
     const [open, setOpen] = useState(false);
@@ -56,7 +56,7 @@ const Links = () => {
                             <button className={styles.logout} onClick={signOut}>logout</button>
                         </>
                     ) : (
-                        <Navlinks className={styles.login}  item={{ id: '8', title: "Login", url: "/login" }} />
+                        // <Navlinks className={styles.login}  item={{ id: '8', title: "Login", url: "/login" }} /> 
                     )
                 }
             </div>
@@ -74,7 +74,7 @@ const Links = () => {
                             <button className={styles.logout} onClick={signOut}>logout</button>
                         </>
                     ) : (
-                        <Navlinks className={styles.login}  item={{ id: '8', title: "Login", url: "/login" }} />
+                        // <Navlinks className={styles.login}  item={{ id: '8', title: "Login", url: "/login" }} />
                     )
                 }
                 </div>
