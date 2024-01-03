@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import userimage  from '../../../../public/nophoto.png'
 
 async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`,{
+  const res = await fetch(`https://cesa-csi-vppcoe.netlify.app/api/posts/${id}`,{
      cache: 'no-store' },
 )
   if (!res.ok) {
