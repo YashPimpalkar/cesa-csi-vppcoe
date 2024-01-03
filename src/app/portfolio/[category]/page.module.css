@@ -1,46 +1,75 @@
-.container{
+/* YourComponent.module.css */
 
-}
-
-.catTitle{
+.container {
+    padding: 20px;
+  }
+  
+  .catTitle {
     color: #53c28b;
-
-}
-
-.item{
+    font-size: 2rem; /* Adjust as needed for smaller screens */
+  }
+  
+  .item {
     display: flex;
-    gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-
-.imgContainer{
-    flex: 1;
-    height: 500px;
-    position: relative;
-
-}
-.content{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically by default */
     gap: 20px;
-    justify-content: center;
-
-}
-
-.item:nth-child(2n+1){
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .item:nth-child(2n+1){
     flex-direction: row-reverse;
+  }
+  
 }
-
-.title{
-    font-size: 50px;
-}
-
-.desc{
-    font-size: 20px;
-}
-
-.img{
+  .imgContainer {
+    height: auto; /* Adjust height for smaller screens */
+    max-height: 300px; /* Set a maximum height for the image container */
+    position: relative;
+  }
+  
+  .img {
     object-fit: cover;
-}
+    width: 100%; /* Make sure the image doesn't exceed its container */
+    max-height: 100%; /* Make sure the image doesn't exceed its container */
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 2rem; /* Adjust as needed for smaller screens */
+  }
+  
+  .desc {
+    font-size: 1rem; /* Adjust as needed for smaller screens */
+  }
+  
+  /* Media query for larger screens */
+  @media screen and (min-width: 768px) {
+    .item {
+      flex-direction: row; /* Display items in a row on screens wider than 768px */
+    }
+  
+    .imgContainer {
+      max-width: 40%; /* Adjust as needed for your design */
+    }
+  
+    .content {
+      flex: 1;
+      padding-left: 20px; /* Adjust as needed for spacing between image and text */
+    }
+  
+
+
+
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 767px) {
+
+
+    .imgContainer {
+        max-height: 50%; /* Adjust as needed for your design */
+      }
+  }
